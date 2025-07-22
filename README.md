@@ -19,8 +19,8 @@ The process is fully automated:
 
 ## Table of Contents
 
-  - [Requirements](https://www.google.com/search?q=%23requirements)
-  - [Installation and Setup](https://www.google.com/search?q=%23installation-and-setup)
+  - [Requirements](https://github.com/soufiane-elbarji/Write-Draw-with-DOBOT/edit/main/README.md#requirements)
+  - [Installation and Setup](https://github.com/soufiane-elbarji/Write-Draw-with-DOBOT/edit/main/README.md#installation-and-setup)
   - [Usage](https://www.google.com/search?q=%23usage)
   - [How It Works](https://www.google.com/search?q=%23how-it-works)
   - [Authors](https://www.google.com/search?q=%23authors)
@@ -57,7 +57,7 @@ cd Write-Draw-with-DOBOT
 
 ### 2\. Install Python Environments
 
-This project requires two separate Python versions. It is highly recommended to use virtual environments to manage them.
+This project requires two separate versions of Python.
 
   * **Install Python 3.10.10**: If you don't have it, download and install it from the [official Python website](https://www.python.org/downloads/release/python-31010/). Make sure to add it to your system's PATH.
 
@@ -76,19 +76,22 @@ pip install -r requirements.txt
 
 This is a critical step for the project to function correctly.
 
-  * **`DobotDll.dll` Path**:
+  * **`DobotDll` Path**:
 
     1.  Copy the full path to the `DobotDll` folder within the cloned repository directory.
-    2.  Go to `System Properties` \> `Advanced` \> `Environment Variables...`.
-    3.  Under `User variables`, find and select the `Path` variable, then click `Edit...`.
-    4.  Click `New` and paste the path to the directory containing `DobotDll.dll`.
+    2.  Go to `Environment Variables...` and add it to the user path.
 
   * **`GEMINI_API_KEY`**:
 
-    1.  In the same `Environment Variables` window, under `System variables`, click `New...`.
+    1.  In the `Environment Variables` window, under `user variables`, click `New...`.
     2.  For `Variable name`, enter `GEMINI_API_KEY`.
     3.  For `Variable value`, paste your Gemini API key.
     4.  Click `OK` to save all changes.
+
+    * **`Potrace`**:
+    1.  Download `Potrace` from [The Official Website](https://potrace.sourceforge.net/#downloading).
+    2.  Copy the full path of the folder.
+    3.  Go to `Environment Variables...` and add it to the user path.
 
 **Important**: You may need to restart your computer or terminal for these environment variable changes to take effect.
 

@@ -85,7 +85,7 @@ This is a critical step for the project to function correctly.
     2.  For `Variable name`, enter `GEMINI_API_KEY`.
     3.  For `Variable value`, paste your Gemini API key.
 
-    * **`Potrace`**:
+  * **`Potrace`**:
     1.  Download `Potrace` from [The Official Website](https://potrace.sourceforge.net/#downloading).
     2.  Copy the full path of the folder.
     3.  Go to `Environment Variables...` and add it to the user path.

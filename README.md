@@ -1,8 +1,5 @@
 # Write-Draw-with-DOBOT
 
-[](https://www.python.org/downloads/release/python-31010/)
-[](https://www.python.org/downloads/release/python-350/)
-
 This project allows a user to control a Dobot Magician robotic arm using voice commands. You can instruct the robot to either write a poem or draw an image on paper. The project uses Google's Gemini AI to generate the content (poems or images) and then converts it into a vector path for the robot to follow.
 
 The process is fully automated:
@@ -21,9 +18,9 @@ The process is fully automated:
 
   - [Requirements](https://github.com/soufiane-elbarji/Write-Draw-with-DOBOT/blob/main/README.md#requirements)
   - [Installation and Setup](https://github.com/soufiane-elbarji/Write-Draw-with-DOBOT/blob/main/README.md#installation-and-setup)
-  - [Usage](https://www.google.com/search?q=%23usage)
-  - [How It Works](https://www.google.com/search?q=%23how-it-works)
-  - [Authors](https://www.google.com/search?q=%23authors)
+  - [Usage](https://github.com/soufiane-elbarji/Write-Draw-with-DOBOT/blob/main/README.md#usage)
+  - [How It Works](https://github.com/soufiane-elbarji/Write-Draw-with-DOBOT/blob/main/README.md#how-it-works)
+  - [Authors](https://github.com/soufiane-elbarji/Write-Draw-with-DOBOT/blob/main/README.md#authors)
 
 -----
 
@@ -38,7 +35,8 @@ The process is fully automated:
 
   * **Python 3.10.10**: For running the main application logic (The version used in this project.
   * **Python 3.5.0**: Required specifically to run the `DobotDrawer.py` script, which interfaces with the `DobotDll.dll`.
-  * **Google Gemini API Key**
+  * **Google Gemini API Key**: For generating Images and Poems.
+  * **Potrace**: For Transforming Image to SVG.
 
 -----
 
@@ -86,12 +84,12 @@ This is a critical step for the project to function correctly.
     1.  In the `Environment Variables` window, under `user variables`, click `New...`.
     2.  For `Variable name`, enter `GEMINI_API_KEY`.
     3.  For `Variable value`, paste your Gemini API key.
-    4.  Click `OK` to save all changes.
 
     * **`Potrace`**:
     1.  Download `Potrace` from [The Official Website](https://potrace.sourceforge.net/#downloading).
     2.  Copy the full path of the folder.
     3.  Go to `Environment Variables...` and add it to the user path.
+    4.  Click `OK` to save all changes.
 
 **Important**: You may need to restart your computer or terminal for these environment variable changes to take effect.
 

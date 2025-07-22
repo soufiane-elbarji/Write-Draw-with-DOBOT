@@ -19,8 +19,8 @@ The process is fully automated:
 
 ## Table of Contents
 
-  - [Requirements](https://github.com/soufiane-elbarji/Write-Draw-with-DOBOT/edit/main/README.md#requirements)
-  - [Installation and Setup](https://github.com/soufiane-elbarji/Write-Draw-with-DOBOT/edit/main/README.md#installation-and-setup)
+  - [Requirements](https://github.com/soufiane-elbarji/Write-Draw-with-DOBOT/blob/main/README.md#requirements)
+  - [Installation and Setup](https://github.com/soufiane-elbarji/Write-Draw-with-DOBOT/blob/main/README.md#installation-and-setup)
   - [Usage](https://www.google.com/search?q=%23usage)
   - [How It Works](https://www.google.com/search?q=%23how-it-works)
   - [Authors](https://www.google.com/search?q=%23authors)

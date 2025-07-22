@@ -29,12 +29,13 @@ The process is fully automated:
 ### Hardware
 
   * **Dobot Magician** robotic arm
-  * A computer running **Windows**
+  * A computer running **Windows** (used in this repo)
 
 ### Software
 
   * **Python 3.10.10**: For running the main application logic (The version used in this project.
   * **Python 3.5.0**: Required specifically to run the `DobotDrawer.py` script, which interfaces with the `DobotDll.dll`.
+  * **[CP210x USB to UART Bridge VCP Drivers](https://www.silabs.com/software-and-tools/usb-to-uart-bridge-vcp-drivers?tab=downloads)**: USB Driver for Dobot. (For Windows)
   * **Google Gemini API Key**: For generating Images and Poems.
   * **Potrace**: For Transforming Image to SVG.
 
@@ -78,6 +79,7 @@ This is a critical step for the project to function correctly.
 
     1.  Copy the full path to the `DobotDll` folder within the cloned repository directory.
     2.  Go to `Environment Variables...` and add it to the user path.
+    (
 
   * **`GEMINI_API_KEY`**:
 

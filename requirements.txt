@@ -1,0 +1,9 @@
+opencv-python
+google-generativeai
+google-genai
+numpy
+svgpathtools
+simplification
+Pillow
+SpeechRecognition
+pyaudio

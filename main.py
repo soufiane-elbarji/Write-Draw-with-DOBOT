@@ -10,7 +10,7 @@ import subprocess
 # ── CONSTANTS FOR DOBOT AND PATHS ──────────────
 
 # Path to the Python 3.5 executable for the Dobot
-PYTHON35_PATH = "C:\\Users\\pc\\AppData\\Local\\Programs\\Python\\Python35\\python.exe"
+PYTHON35_PATH = "C:\\Path\\To\\Your\\Python35\\python.exe" # Update this path accordingly
 DOBOT_DRAWER_PATH = "src/DobotDrawer.py"
 
 # Constants for Image Drawing
@@ -18,15 +18,15 @@ IMAGE_PATH = "temp/image.png"
 
 # Constants for Poem Writing
 FONT = "Fonts\TT Ricordi Allegria Trial Light.ttf"  # Font for rendering text
-FONT_SIZE = 60                   # Font size in points
-LINES = 16                       # Number of lines for the poem
+FONT_SIZE = 80                   # Font size in points
+LINES = 7                       # Number of lines for the poem
 
 # ── CONSTANTS FOR DOBOT ARM SETTINGS ───────────
 
-DOBOT_X_MIN = 200  # X-minimum for Dobot (left side)
+DOBOT_X_MIN = 180  # X-minimum for Dobot (left side)
 DOBOT_X_MAX = 300  # X-maximum for Dobot (right side)
-DOBOT_Y_MIN = -50  # Y-minimum for Dobot (bottom side)
-DOBOT_Y_MAX = 50   # Y-maximum for Dobot (top side)
+DOBOT_Y_MIN = -60  # Y-minimum for Dobot (bottom side)
+DOBOT_Y_MAX = 60   # Y-maximum for Dobot (top side)
 
 DOBOT_Z_DRAW = -55 # Z-height for drawing (pen down)
 DOBOT_Z_MOVE = -45 # Z-height for moving between paths (pen up)
@@ -38,7 +38,10 @@ def main():
     Listens for a command to either write a poem or draw an image,
     generates the corresponding paths, and sends them to the Dobot.
     """
-    cmd = get_keyword.listen()
+    #cmd = get_keyword.listen()  # Uncomment this line to use voice input
+
+    cmd = input("Prompt (write/draw): ") # For testing purposes, use text input
+
     if not cmd:
         print("Could not hear a command.")
         return
@@ -87,7 +90,7 @@ def main():
             DOBOT_X_MIN, DOBOT_X_MAX, DOBOT_Y_MIN, DOBOT_Y_MAX
         )
         optimized_strokes = optimizer.optimize_path(scaled_strokes)
-        optimizer.save_to_file(optimized_strokes, DOBOT_Z_MOVE, DOBOT_Z_DRAW)
+        optimizer.save_to_file(optimized_strokes, DOBOT_Z_MOVE, DOBOT_Z_DRAW, DOBOT_X_MIN, DOBOT_X_MAX, DOBOT_Y_MIN, DOBOT_Y_MAX)
 
         print("Path generated successfully! Sending to Dobot...")
         subprocess.run([PYTHON35_PATH, DOBOT_DRAWER_PATH])
